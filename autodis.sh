@@ -31,17 +31,14 @@
       while IFS= read -r line; 
       do 
         y="$(ps -C pppd --no-headers -o etime | tr -d [:blank:])"; 
-        if [[ $y = "" ]]; 
+        x="$(sed 's/^[ \t]*//;s/ .*//' <<<$line)";  # first non-whitespace sequence of characters up to & not including the next whitespace 
+        if [[ $y = "" ]] || [[ $x = "n/a" ]]; 
         then 
           echo "CONNECTION ENDED: but not by autodis"; 
-          if [[ ! $maxtime = "report" ]]; 
-          then
-            beep -f 800 -l 200 -r 50 -d 400; # 0.5 min = 600 ms x 50 / 60 of beeping
-          fi; 
+          beep -f 800 -l 200 -r 50 -d 400; # 0.5 min = 600 ms x 50 / 60 of beeping
           exit 3; 
         fi; 
         if [[ ${y:5:1} = "" ]]; then y="00:$y"; fi; 
-        x="$(sed 's/^[ \t]*//;s/ .*//' <<<$line)";  # first non-whitespace sequence of characters up to & not including the next whitespace 
         if ((j <= 1)); 
         then 
           j+=1; 
