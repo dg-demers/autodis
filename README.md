@@ -57,7 +57,7 @@ second that show five items:
    "report only" depending on the mode, 
 5) the regional time (as HH:MM:SS AM/PM). 
 
-###  End of and No Connection Exit Printout, Beeps, and Codes  ###
+###  Disconnection/No Connection: Printout, Beeping, and Exit Codes  ###
 #####  End of Existing Connection  #####
 In all modes, if and only if an existing connection ends for any reason, autodis 
 will print the reason (time limit, continuously low incoming bitrate, or 
@@ -68,7 +68,7 @@ short 800 Hz beeps once per second for 30 seconds, then exit.
 If there is no existing ISP connection when autodis is started, an exit 
 message is printed by the external program autodis uses for monitoring 
 the incoming bitrate, ifstat, as "ifstat: no interfaces to monitor!" 
-Then autodis exits. 
+Then autodis exits without beeping. 
 (Thus, autodis must be started after the connection is established.) 
 
 #####  Exit/Error Codes  #####
