@@ -73,11 +73,11 @@ Then autodis exits.
 
 #####  Exit/Error Codes  #####
 The exit code is   
-  1 if the command line arguments are invalid,   
-  2 if there was no existing ISP connection when autodis was started,   
-  3 if the connection was ended, but not by autodis,   
-  4 if the time limit was reached, and   
-  5 if the incoming bitrate was continuously low for 5 minutes.   
+  1, if the command line arguments are invalid,   
+  2, if there was no existing ISP connection when autodis was started,   
+  3, if the connection was ended, but not by autodis,   
+  4, if the time limit was reached, and   
+  5, if the incoming bitrate was continuously low for 5 minutes.   
 Exit code 0 is not used. 
 
 ###  System Requirements  ###
