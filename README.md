@@ -68,8 +68,8 @@ short 800 Hz beeps once per second for 30 seconds, then exit.
 If there is no existing ISP connection when autodis is started, an exit 
 message is printed by the external program autodis uses for monitoring 
 the incoming bitrate, ifstat, as "ifstat: no interfaces to monitor!" 
-Then autodis exits without beeping. 
-(Thus, autodis must be started after the connection is established.) 
+Then autodis exits without beeping. (Thus, autodis must be started after 
+the connection is established.) 
 
 #####  Exit/Error Codes  #####
 The exit code is   
@@ -95,8 +95,8 @@ So far busyppp has only been tested with the following software:
 To use autodis you must be connected through pppd (the point-to-point protocol daemon) to your dial-up ISP. Although you may 
 never have heard of pppd, you are connecting through it if you have used one of its various GUI or TUI frontends, such as kppp, gnome-ppp, or wvdial, that ultimately employs pppd to make the connection. 
 
-In addition, to hear the helpful beep cues (see the section below with that title) you must set up your system to beep. It seems the default in many Linux distributions is to turn off the ability to beep. To find out how to turn it back on see, for example,  
+In addition, to hear the warning beeps you must set up your system to beep. It seems the default in many Linux distributions is to turn off the ability to beep. To find out how to turn it back on see, for example,  
   https://askubuntu.com/questions/277215/make-a-sound-once-process-is-complete
 
-And beep itself needs to have its suid bit set. See  
+And the program beep itself needs to have its suid bit set. See  
   https://github.com/johnath/beep
