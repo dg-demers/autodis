@@ -6,12 +6,12 @@ autodis disconnects from a PPP internet service provider after a maximum
 connection time or if the incoming bitrate remains continuously below 
 30.00 Kbps for 5 minutes. This is particularly useful for managing 
 dial-up connections that are heavily used for automated file downloading 
-(with wget, for example) and that are made to ISPs that do not 
-automatically disconnect after a time limit or after a period of 
-inactivity, but whose terms of service limit daily or monthly connection 
-time. autodis also limits unproductive connection time by disconnecting 
-from poor quality connections of repeatedly low bitrate due to 
-intermittent phone line trouble, slow or failing servers, etc. In 
+(with wget, for example) and that are made to ISPs that automatically 
+disconnect after a time limit that is too large for the user or after a 
+period of inactivity, but whose terms of service limit daily or monthly 
+connection time. autodis also limits unproductive connection time by 
+disconnecting from poor quality connections of repeatedly low bitrate 
+due to intermittent phone line trouble, slow or failing servers, etc. In 
 addition, autodis provides information to the user about a PPP ISP
 connection such as the elapsed connection time, the bitrate, and its 
 consistency by printing to the terminal window and by beeping the 
@@ -48,7 +48,7 @@ reason.
 
 ###  Scrolling Terminal Printout  ###
 In all modes, autodis prints scrolling lines to the terminal every 
-second that show five items: 
+second that show the following five items in order from left to right: 
 1) the incoming bitrate in Kbps (as NN.DD), 
 2) the connection elapsed time (as HH:MM:SS), 
 3) the number of seconds the incoming bitrate has been continuously less 
@@ -92,7 +92,7 @@ So far busyppp has only been tested with the following software:
   pppd 2.4.7  
   ifstat 1.1 with the compiled-in drivers proc and snmp  
 
-To use autodis you must be connected through pppd (the point-to-point protocol daemon) to your dial-up ISP. Although you may 
+To use autodis you must be connected through pppd (the point-to-point protocol daemon) to your dial-up ISP _and it must be your_ **only** _active network connection._ Although you may 
 never have heard of pppd, you are connecting through it if you have used one of its various GUI or TUI frontends, such as kppp, gnome-ppp, or wvdial, that ultimately employs pppd to make the connection. 
 
 In addition, to hear the warning beeps you must set up your system to beep. It seems the default in many Linux distributions is to turn off the ability to beep. To find out how to turn it back on see, for example,  
