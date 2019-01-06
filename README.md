@@ -7,15 +7,15 @@ connection time or if the incoming bitrate remains continuously below
 30.00 Kbps for 5 minutes. This is particularly useful for managing 
 dial-up connections that are heavily used for automated file downloading 
 (with wget, for example) and that are made to ISPs that automatically 
-disconnect after a time limit that is too large for the user or after a 
-period of inactivity, but whose terms of service limit daily or monthly 
-connection time. autodis also limits unproductive connection time by 
-disconnecting from poor quality connections of repeatedly low bitrate 
-due to intermittent phone line trouble, slow or failing servers, etc. In 
-addition, autodis provides information to the user about a PPP ISP
-connection such as the elapsed connection time, the bitrate, and its 
-consistency by printing to the terminal window and by beeping the 
-speaker. 
+disconnect after a time limit that is too large for the user or that *do 
+not* automatically disconnect after a period of inactivity, but whose 
+terms of service limit daily or monthly connection time. autodis also 
+limits unproductive connection time by disconnecting from poor quality 
+connections of repeatedly low bitrate due to intermittent phone line 
+trouble, slow or failing servers, etc. In addition, autodis provides 
+information to the user about a PPP ISP connection such as the elapsed 
+connection time, the bitrate, and its consistency by printing to the 
+terminal window and by beeping the speaker. 
 
 ###  Command Line Arguments, Modes, and Script-Caused Disconnection  ###
 #####  Command Line Arguments Determine Mode #####
