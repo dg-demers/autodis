@@ -57,7 +57,7 @@
               beep -f 600; 
             else 
               echo "CONNECTION ENDED: continuously low bitrate in (< 30.00 Kbps) for 5 min"; 
-              killall -s 2 wvdial; 
+              killall -s 2 pppd; 
               beep -f 800 -l 200 -r 50 -d 400; # 0.5 min = 600 ms x 50 / 60 of beeping
               exit 5; 
             fi; 
@@ -69,7 +69,7 @@
           if [[ ! $maxtime == "report" &&  ! $maxtime == "no time" && $y > $maxtime || $y = $maxtime ]]; 
           then 
             echo "CONNECTION ENDED: time limit $maxtime" reached; 
-            killall -s 2 wvdial; 
+            killall -s 2 pppd; 
             beep -f 800 -l 200 -r 50 -d 400; # 0.5 min = 600 ms x 50 / 60 of beeping
             exit 4; 
           fi; 
